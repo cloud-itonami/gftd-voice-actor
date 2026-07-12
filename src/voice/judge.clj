@@ -12,7 +12,7 @@
   pacing, whether the synthesized voice actually breathes the way the
   persona wants). A real perceptual judge (an audio-quality model, a
   speech-to-text-then-critique pass) is follow-up work — see
-  ADR-2607122200 Consequences."
+  ADR-2607122400 Consequences."
   (:require [cheshire.core :as json]
             [clojure.string :as str])
   (:import [java.net URI]
