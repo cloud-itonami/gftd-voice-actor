@@ -2,7 +2,7 @@
 
 A **free TTS voice-line generation** loop actor for
 [`network-isekai`](https://github.com/gftdcojp/network-isekai), gftdcojp's
-seventh and last of seven per-modality asset actors (ADR-2607122400).
+seventh and last of seven per-modality asset actors (ADR-2607123000).
 Persona: **コエ (Koe)**, 声優 (narrator/voice) — "台詞の呼吸を大事にする
 ナレーター。棒読みを何より嫌う — 短い一言でも息づかいを残す" (see
 `resources/persona.edn`). Sibling actors: `gftd-illust-actor` (image),
@@ -74,7 +74,7 @@ prompts, not for a line a narrator would actually say).
 Unlike a typical actor repo, `assets/` here is **git-annex + Backblaze B2**
 (`-c text2git`: code/EDN stay plain git, binaries get annexed) — accepted
 assets are saved straight into this repo and pushed to B2, so "actor's own
-git repo" and "asset storage" are the same thing (ADR-2607122400 §5).
+git repo" and "asset storage" are the same thing (ADR-2607123000 §5).
 `assets/<id>.edn` is written in the `network-isekai` `isekai.asset` manifest
 shape (`:asset/gen {:stage :tts ...}`, matching network-isekai's own gen
 stage naming) so a later Asset Hub import needs no conversion.
@@ -105,7 +105,7 @@ CACAO identity is self-minted to `.voice/identity.edn` on first run
 
 ## Design
 
-ADR-2607122400 (`network-isekai 向け murakumo 生成アセット持続ループ actor
+ADR-2607123000 (`network-isekai 向け murakumo 生成アセット持続ループ actor
 群`) is the SSoT for this actor and its six siblings. Direct code ancestry:
 `cloud-itonami`'s `src/cloud_itonami/media/{murakumo,aozora,cacao,publisher,
 publish}.clj(c)` (murakumo→governor→aozora pipeline), `cloud-murakumo`'s
